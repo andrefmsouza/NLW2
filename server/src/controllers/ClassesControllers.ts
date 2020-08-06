@@ -29,14 +29,14 @@ export default class ClassesController{
                     .from('class_schedule')
                     .whereRaw('`class_schedule`.`class_id` = `classes`.`id`')
                     .whereRaw('`class_schedule`.`week_day` = ??', [Number(week_day)])
-                    .whereRaw('`class_schedule`.`from` <= ??', [time])
-                    .whereRaw('`class_schedule`.`to` > ??', [time])
+                    .whereRaw('`class_schedule`.`from` <= ??', [timeInMinutes])
+                    .whereRaw('`class_schedule`.`to` > ??', [timeInMinutes])
             })
             .where('classes.subject', '=', subject)
             .join('users', 'classes.user_id', '=', 'users.id')
             .select([ 'classes.*', 'users.*'])
 
-        return res.json(classes);
+        return res.status(201).json(classes);
     }
 
     async create(req: Request, res: Response){
@@ -85,7 +85,6 @@ export default class ClassesController{
         
             return res.status(201).json({});
         }catch(err){
-    
             trx.rollback();
     
             return res.status(400).json({
