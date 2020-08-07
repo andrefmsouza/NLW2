@@ -18,6 +18,7 @@
 Este projeto contém as seguintes tecnologias:
 
 - [React](https://reactjs.org)
+- [NodeJS](https://nodejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## 💻 Projeto

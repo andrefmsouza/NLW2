@@ -4,8 +4,6 @@
 /web/.pnp
 /web/.pnp.js
 
-/server/node_modules
-
 # testing
 /web/coverage
 
@@ -22,3 +20,20 @@
 /web/npm-debug.log*
 /web/yarn-debug.log*
 /web/yarn-error.log*
+
+
+/server/node_modules
+
+/mobile/node_modules/**/*
+/mobile/.expo/*
+/mobile/npm-debug.*
+/mobile/*.jks
+/mobile/*.p8
+/mobile/*.p12
+/mobile/*.key
+/mobile/*.mobileprovision
+/mobile/*.orig.*
+/mobile/web-build/
+
+# macOS
+/mobile/.DS_Store
