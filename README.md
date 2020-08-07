@@ -125,8 +125,6 @@ $ npm run start
 
 ### 📱Rodando a aplicação mobile 
 
-🚧 Em construção... 🚧
-
 ```bash
 # Clone este repositório
 $ git clone https://github.com/andrefmsouza/NLW2
